@@ -1,0 +1,55 @@
+小程序5
+
+基本数据模型
+{
+	name: 'Kevin',
+	phone: '13632672159'
+}
+
+1.查询 
+http://localhost:3008/user?action=info&name=Kevin
+
+查询并显示name为kevin的数据，页面上显示:
+
+查询结果:
+用户名: Kevin
+手机号码: 13632672159
+
+注意:
+name查询不区分大小写
+
+2.添加
+http://localhost:3008/user?action=add&name=AA&phone=13632677777
+添加name为AA，phone为13632677777的数据，页面上显示:
+
+用户名: AA
+添加成功
+
+3.删除
+http://localhost:3008/user?action=delete&name=AA
+
+用户名: AA
+删除成功
+
+
+3.更新
+http://localhost:3008/user?action=update&name=Kevin&phone=13632677777
+
+更新name为Kevin的phone值，页面上显示:
+
+用户名: Kevin
+更新成功
+
+4.显示所有记录
+http://localhost:3008/user?action=list
+
+查询所有记录，页面上显示:
+
+总共 3 条记录:
+用户名: Kevin 电话号码: 13632672159
+------
+用户名: AA 电话号码: 13632677777
+
+
+
+以上数据存在内存中
